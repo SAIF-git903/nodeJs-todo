@@ -12,7 +12,7 @@ function TodoBox(props: TodoBoxProps) {
   const [isPlusClicked, setPlusClicked] = React.useState<boolean>(false);
   const [inputVal, SetInput] = React.useState<string>("");
   const [apiUser, setApiUser] = React.useState<any[]>([]);
-  const [selectedUser, setSelectedUser] = React.useState<any>(null); // Track the selected user here
+  const [selectedUser, setSelectedUser] = React.useState<any>(null);
   const [addedTasks, setAddedTasks] = React.useState<any[]>([]);
 
   const { title } = props;
@@ -51,6 +51,7 @@ function TodoBox(props: TodoBoxProps) {
       });
     SetInput("");
     setSelectedUser(null);
+    // code change
   }
 
   function getPostedTasks() {
