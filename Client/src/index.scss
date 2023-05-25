@@ -1,0 +1,30 @@
+$primary: #326dee;
+$secondary: #1ac888;
+$tertiary: #a39c23;
+
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "tertiary": $tertiary,
+);
+
+@each $key, $val in $colors {
+  .text-heading-#{$key} {
+    color: $val;
+    transition: color 0.6s ease-in;
+  }
+
+  .text-hover-#{$key} {
+    &:hover {
+      color: $val;
+      transition: color 0.6s ease-in;
+    }
+  }
+
+  @for $i from 1 through 5 {
+    .text-#{$key}-dark-#{$i} {
+      color: mix(black, $val, $i * 10);
+      transition: color 0.6s ease-in;
+    }
+  }
+}

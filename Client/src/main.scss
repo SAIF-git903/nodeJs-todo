@@ -1,0 +1,14 @@
+$Primary: pink;
+$base-border-radius: 5px;
+$basic-gap: 5px;
+
+.centered-anything {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,16 @@
+@import "../../main.scss";
+
+.task-container {
+  background-color: lighten(aquamarine, 20%);
+  border: 1px solid aquamarine;
+  border-radius: $base-border-radius;
+  padding: 3px;
+  line-height: 10px;
+  margin-top: 5px;
+
+
+  p {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+}

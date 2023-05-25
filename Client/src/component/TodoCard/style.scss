@@ -1,0 +1,118 @@
+@import "../../main.scss";
+
+.span-bg-st {
+  background-color: $Primary;
+  padding: 5px 5px 0 5px;
+  border-radius: $base-border-radius;
+  border: 2px solid $Primary;
+  margin: 0 5px;
+  transition: 0.6s ease-in;
+  font-family: "Pangolin";
+
+  &:hover {
+    border: 2px solid $Primary;
+    background-color: transparent;
+    transition: 0.6s ease-in;
+  }
+}
+
+.todo-main-container {
+  width: 250px;
+  height: 100px;
+
+  .new-task-assign-div {
+    border: 1px solid rgb(67, 226, 81);
+    border-radius: $base-border-radius;
+    padding: 5px;
+    margin-top: 5px;
+    position: relative;
+
+    .save-btn {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      font-family: sans-serif;
+      font-size: 12px;
+      background-color: lighten(green , 50%);
+      padding: 5px;
+      border-radius: 4px;
+      transition: 1s ease;
+      color: rgb(255, 255, 255);
+
+
+      &:hover {
+        background-color: lighten(green, 30%);
+        transition: 1s ease;
+        cursor: pointer;
+      }
+    }
+
+    .close-icon {
+      position: absolute;
+      right: 10px;
+      top: 5px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .user-icon {
+      margin: 5px 0 0 5px;
+
+      .selected-user-icon{
+        background-color: lighten(green, 60%);
+        padding: 5px;
+        border-radius: 50%;
+      }
+
+      img {
+        transition: 1s ease;
+        padding: 5px;
+
+        &:hover {
+          cursor: pointer;
+          background-color: lighten(green, 60%);
+          border-radius: 50%;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          transition: 1s ease;
+        }
+      }
+    }
+
+    input {
+      border: none;
+      outline: none;
+      padding: 4px;
+      background-color: transparent;
+    }
+  }
+
+  .todo-card-box {
+    border-top: 4px solid $Primary;
+    border-top-left-radius: $base-border-radius;
+    border-top-right-radius: $base-border-radius;
+    gap: $basic-gap;
+    background-color: #ffff;
+    height: 40px;
+    position: relative;
+
+    .img-plus-div {
+      visibility: hidden;
+    }
+
+    &:hover {
+      .img-plus-div {
+        position: absolute;
+        right: 10px;
+        visibility: visible;
+        cursor: pointer;
+      }
+    }
+
+    .todo-card-heading {
+      margin-left: 10px;
+      font-weight: bold;
+    }
+  }
+}
